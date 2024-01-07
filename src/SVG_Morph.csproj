@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88C9BB31-CC0C-45D9-9040-3201444740F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SVG_Morph</RootNamespace>
+    <AssemblyName>SVG_Morph</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlLineEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLineEdit.Designer.cs">
+      <DependentUpon>ControlLineEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\ISvgClipable.cs" />
+    <Compile Include="Draw\ISvgFilterable.cs" />
+    <Compile Include="Draw\ISvgStylable.cs" />
+    <Compile Include="Draw\ISvgTransformable.cs" />
+    <Compile Include="Draw\ISvgViewPort.cs" />
+    <Compile Include="Draw\RawBitmap.cs" />
+    <Compile Include="Draw\SvgArcSegment.cs" />
+    <Compile Include="Draw\SvgAttributeAttribute.cs" />
+    <Compile Include="Draw\SvgAttributeCollection.cs" />
+    <Compile Include="Draw\SvgCircle.cs" />
+    <Compile Include="Draw\SvgClipPath.cs" />
+    <Compile Include="Draw\SvgClipRule.cs" />
+    <Compile Include="Draw\SvgClosePathSegment.cs" />
+    <Compile Include="Draw\SvgColourConverter.cs" />
+    <Compile Include="Draw\SvgColourServer.cs" />
+    <Compile Include="Draw\SvgCoordinateUnits.cs" />
+    <Compile Include="Draw\SvgCubicCurveSegment.cs" />
+    <Compile Include="Draw\SvgDefinitionList.cs" />
+    <Compile Include="Draw\SvgDescription.cs" />
+    <Compile Include="Draw\SvgDocument.cs" />
+    <Compile Include="Draw\SvgDtdResolver.cs" />
+    <Compile Include="Draw\SvgElement.cs" />
+    <Compile Include="Draw\SvgElementAttribute.cs" />
+    <Compile Include="Draw\SvgElementCollection.cs" />
+    <Compile Include="Draw\SvgElementFactory.cs" />
+    <Compile Include="Draw\SvgElementIdManager.cs" />
+    <Compile Include="Draw\SvgElementStyle.cs" />
+    <Compile Include="Draw\SvgEllipse.cs" />
+    <Compile Include="Draw\SvgException.cs" />
+    <Compile Include="Draw\SvgFillRule.cs" />
+    <Compile Include="Draw\SvgFilter.cs" />
+    <Compile Include="Draw\SvgFilterPrimitive.cs" />
+    <Compile Include="Draw\SvgFragment.cs" />
+    <Compile Include="Draw\SvgGaussianBlur.cs" />
+    <Compile Include="Draw\SvgGradientServer.cs" />
+    <Compile Include="Draw\SvgGradientSpreadMethod.cs" />
+    <Compile Include="Draw\SvgGradientStop.cs" />
+    <Compile Include="Draw\SvgGroup.cs" />
+    <Compile Include="Draw\SvgHandler.cs" />
+    <Compile Include="Draw\SvgLine.cs" />
+    <Compile Include="Draw\SvgLinearGradientServer.cs" />
+    <Compile Include="Draw\SvgLineSegment.cs" />
+    <Compile Include="Draw\SvgMask.cs" />
+    <Compile Include="Draw\SvgMatrix.cs" />
+    <Compile Include="Draw\SvgMerge.cs" />
+    <Compile Include="Draw\SvgMoveToSegment.cs" />
+    <Compile Include="Draw\SvgPaintServer.cs" />
+    <Compile Include="Draw\SvgPaintServerFactory.cs" />
+    <Compile Include="Draw\SvgPath.cs" />
+    <Compile Include="Draw\SvgPathBuilder.cs" />
+    <Compile Include="Draw\SvgPathSegment.cs" />
+    <Compile Include="Draw\SvgPathSegmentList.cs" />
+    <Compile Include="Draw\SvgPatternServer.cs" />
+    <Compile Include="Draw\SvgPoint.cs" />
+    <Compile Include="Draw\SvgPolygon.cs" />
+    <Compile Include="Draw\SvgPolyline.cs" />
+    <Compile Include="Draw\SvgQuadraticCurveSegment.cs" />
+    <Compile Include="Draw\SvgRadialGradientServer.cs" />
+    <Compile Include="Draw\SvgRectangle.cs" />
+    <Compile Include="Draw\SvgRenderer.cs" />
+    <Compile Include="Draw\SvgRotate.cs" />
+    <Compile Include="Draw\SvgScale.cs" />
+    <Compile Include="Draw\SvgShear.cs" />
+    <Compile Include="Draw\SvgSkew.cs" />
+    <Compile Include="Draw\SvgStrokeLineCap.cs" />
+    <Compile Include="Draw\SvgStrokeLineJoin.cs" />
+    <Compile Include="Draw\SvgText.cs" />
+    <Compile Include="Draw\SvgTextAnchor.cs" />
+    <Compile Include="Draw\SvgTextReader.cs" />
+    <Compile Include="Draw\SvgTextSpan.cs" />
+    <Compile Include="Draw\SvgTransDocument.cs" />
+    <Compile Include="Draw\SvgTransform.cs" />
+    <Compile Include="Draw\SvgTransformCollection.cs" />
+    <Compile Include="Draw\SvgTransformConverter.cs" />
+    <Compile Include="Draw\SvgTranslate.cs" />
+    <Compile Include="Draw\SvgUnit.cs" />
+    <Compile Include="Draw\SvgUnitCollection.cs" />
+    <Compile Include="Draw\SvgUnitConverter.cs" />
+    <Compile Include="Draw\SvgUse.cs" />
+    <Compile Include="Draw\SvgViewBox.cs" />
+    <Compile Include="Draw\SvgVisualElement.cs" />
+    <Compile Include="Draw\SvgVisualElementStyle.cs" />
+    <Compile Include="SVG_Morph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SVG_Morph.Designer.cs">
+      <DependentUpon>SVG_Morph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlLineEdit.resx">
+      <DependentUpon>ControlLineEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SVG_Morph.resx">
+      <DependentUpon>SVG_Morph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\svg11.dtd" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\svg11.dtd" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\arrow_l.bmp" />
+    <Content Include="Resources\arrow_l_off.bmp" />
+    <Content Include="Resources\arrow_r.BMP" />
+    <Content Include="Resources\arrow_r_off.bmp" />
+    <None Include="Resources\BackG.bmp" />
+    <Content Include="Resources\buffer_off.bmp" />
+    <Content Include="Resources\buffer_on.bmp" />
+    <Content Include="Resources\folder.bmp" />
+    <Content Include="Resources\layer_add.bmp" />
+    <Content Include="Resources\layer_del.bmp" />
+    <Content Include="Resources\o_select.bmp" />
+    <Content Include="Resources\pause_off.bmp" />
+    <Content Include="Resources\pause_on.bmp" />
+    <Content Include="Resources\play_off.bmp" />
+    <Content Include="Resources\play_on.bmp" />
+    <Content Include="Resources\stop_off.bmp" />
+    <Content Include="Resources\stop_on.bmp" />
+    <Content Include="Resources\timebar_box.bmp" />
+    <Content Include="Resources\timebar_line.bmp" />
+    <Content Include="Resources\u_select.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
